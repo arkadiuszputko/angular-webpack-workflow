@@ -1,5 +1,9 @@
 import angular from 'angular';
 
-import home from './home/home.component';
+import home from './modules/home/index';
 
-export default angular.module('app', [home]).name;
+import './styles/app.scss';
+
+export default angular.module('app', [
+    home
+]).name;
