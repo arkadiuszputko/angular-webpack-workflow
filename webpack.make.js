@@ -86,7 +86,7 @@ module.exports = function makeWebpackConfig(options) {
     } else if (BUILD) {
         config.devtool = 'source-map';
     } else {
-        config.devtool = 'eval';
+        config.devtool = 'source-map';
     }
 
     /**
@@ -128,7 +128,8 @@ module.exports = function makeWebpackConfig(options) {
         },{
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: "file-loader"
-        }]
+        }],
+        devtool: 'source-map'
     };
 
     // ISPARTA LOADER
